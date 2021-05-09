@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  font-size: 13px;
+}
+
+* {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #ecf2f8;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "first first second third" "fourth fifth fifth third";
+  gap: 20px;
+}
+
+.testimonial {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.testimonial-1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: first;
+  background: #7541c8;
+  color: white;
+  position: relative;
+}
+
+.testimonial-1 .icon {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  opacity: 0.3;
+}
+
+.testimonial-2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: second;
+  background: #48556a;
+  color: white;
+}
+
+.testimonial-3 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: third;
+  background: white;
+}
+
+.testimonial-4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fourth;
+  background: white;
+}
+
+.testimonial-5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: fifth;
+  background: #19212e;
+  color: white;
+}
+
+.testimonial .person-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.testimonial .person-info img {
+  border-radius: 50%;
+  border: 2px solid #48556a;
+}
+
+.testimonial .person-info .name {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.testimonial .person-info .name p:first-child {
+  font-size: 1.3rem;
+}
+
+.testimonial .person-info .name p:last-child {
+  opacity: 0.9;
+}
+
+.testimonial .description {
+  margin: 20px 0;
+  text-align: left;
+  font-size: 1.5rem;
+}
+
+.testimonial .experience {
+  opacity: 0.6;
+  font-size: 1.15rem;
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 80vw;
+    margin: 10px auto;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "a" "b" "c" "d" "e";
+    gap: 20px;
+  }
+  .testimonial {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .testimonial-1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: a;
+    background: #7541c8;
+    color: white;
+    position: relative;
+  }
+  .testimonial-1 .icon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0.3;
+  }
+  .testimonial-2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: b;
+    background: #48556a;
+    color: white;
+  }
+  .testimonial-3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: c;
+    background: white;
+  }
+  .testimonial-4 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: d;
+    background: white;
+  }
+  .testimonial-5 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: e;
+    background: #19212e;
+    color: white;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

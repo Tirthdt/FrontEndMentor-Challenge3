@@ -1,0 +1,167 @@
+$moderate-violet: hsl(263, 55%, 52%);
+$grayish-blue: hsl(217, 19%, 35%);
+$blackish-blue: hsl(219, 29%, 14%);
+$white: hsl(0, 0%, 100%);
+
+$light-gray: hsl(0, 0%, 81%);
+$l-grayish-blue: hsl(210, 46%, 95%);
+
+$font-size: 13px;
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+
+$font-family: "Barlow Semi Condensed", sans-serif;
+
+:root {
+  font-size: $font-size;
+}
+
+* {
+  font-family: $font-family;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $l-grayish-blue;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-areas:
+    "first first second third"
+    "fourth fifth fifth third";
+  gap: 20px;
+}
+
+.testimonial {
+  padding: 20px;
+  border-radius: 10px;
+  &-1 {
+    grid-area: first;
+    background: $moderate-violet;
+    color: $white;
+    position: relative;
+
+    .icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      opacity: 0.3;
+    }
+  }
+
+  &-2 {
+    grid-area: second;
+    background: $grayish-blue;
+    color: $white;
+  }
+
+  &-3 {
+    grid-area: third;
+    background: $white;
+  }
+
+  &-4 {
+    grid-area: fourth;
+    background: $white;
+  }
+
+  &-5 {
+    grid-area: fifth;
+    background: $blackish-blue;
+    color: $white;
+  }
+
+  .person-info {
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: 50%;
+      border: 2px solid hsl(217, 19%, 35%);
+    }
+
+    .name {
+      display: inline-block;
+      margin-left: 20px;
+
+      p:first-child {
+        font-size: 1.3rem;
+      }
+
+      p:last-child {
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .description {
+    margin: 20px 0;
+    text-align: left;
+    font-size: 1.5rem;
+  }
+
+  .experience {
+    opacity: 0.6;
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    max-width: 80vw;
+    margin: 10px auto;
+    display: grid;
+    grid-template-areas:
+      "a"
+      "b"
+      "c"
+      "d"
+      "e";
+    gap: 20px;
+  }
+
+  .testimonial {
+    padding: 20px;
+    border-radius: 10px;
+    &-1 {
+      grid-area: a;
+      background: $moderate-violet;
+      color: $white;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        opacity: 0.3;
+      }
+    }
+
+    &-2 {
+      grid-area: b;
+      background: $grayish-blue;
+      color: $white;
+    }
+
+    &-3 {
+      grid-area: c;
+      background: $white;
+    }
+
+    &-4 {
+      grid-area: d;
+      background: $white;
+    }
+
+    &-5 {
+      grid-area: e;
+      background: $blackish-blue;
+      color: $white;
+    }
+  }
+}
